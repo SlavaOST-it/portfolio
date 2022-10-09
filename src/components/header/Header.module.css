@@ -1,4 +1,68 @@
-.header{
-    height: 80px;
-    background-color: aquamarine;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 100;
+
+    line-height: 70px;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /*padding: 0 70px;*/
+
 }
+
+.nav {
+     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.button {
+    color: #333;;
+    padding: 10px 25px;
+    /*width:50px;*/
+    text-decoration: none;
+    text-align: center;
+    /*margin: 2px;*/
+    /*display: block;*/
+    background-color: white;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #333 50%, #333);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .40s ease-in;
+    font: 400 18px Tahoma;
+    font-weight: 200;
+    /*border: 0.5px solid black;*/
+    border: none;
+}
+
+.buttonActive {
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #333;
+    /*background-image: linear-gradient(to right, transparent, transparent 50%, #333 50%, #333);*/
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    /*transition: all .75s ease-in;*/
+    font: 400 18px Tahoma;
+    font-weight: 200;
+    /*border: 0.5px solid black;*/
+    border: none;
+
+    /*height: 100%;*/
+    /*z-index: 100;*/
+
+
+
+}
+.button:hover {
+    background-position: 0 0;
+    color: #fff;
+}
+
