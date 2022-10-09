@@ -1,0 +1,22 @@
+.footerBlock{
+    width: 1200px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    background-color: #fff;
+    z-index: 90;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.text{
+    color: #333;
+    /*font-family: poppins;*/
+}
