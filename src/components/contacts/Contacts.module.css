@@ -1,0 +1,87 @@
+.contacts {
+
+}
+.contactsContainer{
+
+}
+.contacts_block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*margin: 0 auto;*/
+    /*max-width: 80%;*/
+}
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.text_block{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: space-between;
+    align-items: center;
+
+    /*margin: 0 auto;*/
+    /*max-width: 80%;*/
+}
+
+.text_block span{
+    font-size: 30px;
+    color: #545454;
+}
+.span1{
+
+}
+.span2{
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.span3{
+    display: inline-block;
+    margin-left: 120px;
+    margin-top: 40px;
+}
+
+.form_block {
+    margin-top: 60px;
+    text-align: center;
+
+}
+
+.form_block input {
+    width: 450px;
+    height: 40px;
+
+    display: block;
+    margin-bottom: 25px;
+}
+
+.form_block textarea {
+    width: 450px;
+    height: 105px;
+    resize: none;
+    margin-bottom: 25px;
+}
+
+.form_block_btn {
+    color: white;
+    padding: 16px 42px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #333;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #333 50%, #333);
+    background-position: 100%;
+    background-size: 200% 100%;
+    transition: all .40s ease-in;
+    font: 400 18px Tahoma;
+    font-weight: 200;
+    border: 2px solid #333;
+}
+
+.form_block_btn:hover {
+    color: #333;
+    background-color: white;
+    border: 2px solid #333;
+}
