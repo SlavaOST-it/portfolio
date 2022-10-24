@@ -1,0 +1,27 @@
+.skillBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #797979;
+    transition: all 0.2s ease-in;
+}
+
+.skillBlock:hover {
+    transform: scale(1.08);
+
+    -webkit-box-shadow: 0px 0px 15px 4px rgba(34, 60, 80, 1);
+    -moz-box-shadow: 0px 0px 15px 4px rgba(34, 60, 80, 1);
+    box-shadow: 0px 0px 15px 4px rgba(34, 60, 80, 1);
+
+    transition: all 0.2s ease-in;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
