@@ -16,6 +16,7 @@ export const Presentation = () => {
             <div className={s.photoBlock}>
                 <img src={photo} alt={"photo_me"}/>
             </div>
+
             <div className={s.block_text}>
                 <div className={s.fullName}>
                     <div>VYACHESLAV</div>
