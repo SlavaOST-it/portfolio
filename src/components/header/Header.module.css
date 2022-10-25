@@ -18,3 +18,23 @@
 }
 
 
+@media (max-width: 1120px) {
+    .header {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        display: flex;
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        display: none;
+        max-width: none;
+    }
+
+}

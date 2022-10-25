@@ -2,15 +2,15 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .photoBlock {
 }
 
 .photoBlock img {
-    height: 80vh;
+    height: 500px;
 }
 
 .block_text {
-    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,16 +18,15 @@
     margin-left: 70px;
 }
 
-
 .fullName {
     font-size: 50px;
     font-weight: 700;
     color: #414141;
 }
-.lastName{
+
+.lastName {
 
 }
-
 
 .hr {
     width: 390px;
@@ -38,4 +37,38 @@
 .text {
     font-size: 30px;
     color: #545454;
+}
+
+@media (max-width: 1120px) {
+    .presentationBlock {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .presentationBlock {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .presentationBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: none;
+    }
+
+    .block_text {
+        margin: 0 auto;
+    }
+
+    .hr {
+        width: 350px;
+        height: 3px;
+        background-color: #414141;
+    }
 }

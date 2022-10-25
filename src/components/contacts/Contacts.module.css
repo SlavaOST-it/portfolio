@@ -1,44 +1,46 @@
 .contacts {
 
 }
-.contactsContainer{
+
+.contactsContainer {
 
 }
+
 .contacts_block {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*margin: 0 auto;*/
-    /*max-width: 80%;*/
 }
-.formContainer{
+
+.formContainer {
     display: flex;
     justify-content: space-between;
 }
-.text_block{
+
+.text_block {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     justify-content: space-between;
     align-items: center;
-
-    /*margin: 0 auto;*/
-    /*max-width: 80%;*/
 }
 
-.text_block span{
+.text_block span {
     font-size: 30px;
     color: #545454;
 }
-.span1{
+
+.span1 {
 
 }
-.span2{
+
+.span2 {
     display: inline-block;
     margin-left: 60px;
     margin-top: 40px;
 }
-.span3{
+
+.span3 {
     display: inline-block;
     margin-left: 120px;
     margin-top: 40px;
@@ -47,7 +49,6 @@
 .form_block {
     margin-top: 60px;
     text-align: center;
-
 }
 
 .form_block input {
@@ -84,4 +85,97 @@
     color: #333;
     background-color: white;
     border: 2px solid #333;
+}
+
+@media (max-width: 1120px) {
+    .contacts {
+        max-width: 970px;
+    }
+
+    .contactsContainer {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts {
+        max-width: 750px;
+    }
+
+    .contactsContainer {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        /*margin: 0 auto;*/
+        max-width: 750px;
+    }
+
+    .contacts_block {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .span3 {
+        margin-bottom: 20px;
+    }
+
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+    }
+
+    .contactsContainer {
+        display: flex;
+        flex-direction: column;
+        /*max-width: none;*/
+    }
+
+    .text_block {
+        text-align: center;
+    }
+
+    .form_block {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*text-align: center;*/
+        /*justify-content: center;*/
+    }
+
+    .form_block input {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        text-align: center;
+        /*justify-content: center;*/
+
+        /*width: 150px;*/
+        /*height: 40px;*/
+
+        /*display: block;*/
+        margin-bottom: 25px;
+    }
+
+    .form_block textarea {
+        /*width: 450px;*/
+        /*height: 105px;*/
+        resize: none;
+        margin-bottom: 25px;
+    }
+
+    .span2 {
+        margin: 0;
+    }
+
+    .span3 {
+        margin: 0 0 20px 0;
+    }
 }

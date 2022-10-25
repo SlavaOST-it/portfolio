@@ -22,7 +22,6 @@ export const Portfolio = () => {
             </div>
 
             <div className={s.projects}>
-
                 <ProjectItem
                     style={socialNet}
                     url={"https://github.com/SlavaOST-it/samurai-way-main"}
@@ -40,7 +39,6 @@ export const Portfolio = () => {
                                  "unit-tests and etc."}
                 />
             </div>
-
         </div>
     )
 }

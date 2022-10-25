@@ -3,7 +3,6 @@ import emailjs from 'emailjs-com';
 import s from "./Contacts.module.css";
 import commonStyle from "../../common/styles/CommonStyles.module.css";
 import {ContactItem} from "./contactItem/ContactItem";
-// import cvPDF from "../../common/downloudFile/ostapkevich-cv.pdf"
 
 
 // ===== logo ===== //
@@ -52,28 +51,31 @@ export const Contacts = () => {
                         </div>
                         <div>
                             <button className={s.form_block_btn}>
-                                <a
-                                    href={"cvPDF"}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    download={"cvPDF"}/>
+                                {/*<a*/}
+                                {/*    href={"cvPDF"}*/}
+                                {/*    target="_blank"*/}
+                                {/*    rel="noreferrer"*/}
+                                {/*    download={"cvPDF"}/>*/}
                                 Download CV
                             </button>
                         </div>
                     </div>
 
-                    <form onSubmit={sendEmail} className={s.form_block}>
-                        <div>
-                            <input type={"text"} placeholder={"Name"} name={"name"}/>
-                            <input type={"text"} placeholder={"E-mail"} name={"email"}/>
-                        </div>
-                        <div>
-                            <textarea placeholder={"Your message"} name={"message"}></textarea>
-                        </div>
-                        <button type={"submit"} value="Send" className={s.form_block_btn}>
-                            Send Message
-                        </button>
-                    </form>
+                    <div className={s.form_block}>
+                        <form onSubmit={sendEmail} >
+                            <div>
+                                <input type={"text"} placeholder={"Name"} name={"name"}/>
+                                <input type={"text"} placeholder={"E-mail"} name={"email"}/>
+                            </div>
+                            <div>
+                                <textarea placeholder={"Your message"} name={"message"}></textarea>
+                            </div>
+                            <button type={"submit"} value="Send" className={s.form_block_btn}>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
 
                 </div>
             </div>

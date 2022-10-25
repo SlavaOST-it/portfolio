@@ -1,5 +1,6 @@
 .projectItem {
     width: 500px;
+    margin-bottom: 30px;
 }
 
 .image {
@@ -70,3 +71,4 @@
     line-height: 1.7;
 
 }
+

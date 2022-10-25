@@ -1,14 +1,16 @@
 /*font-family: 'Open Sans', sans-serif;*/
 
 .container {
-    width: 75%;
+    max-width: 1120px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .title_block {
     display: flex;
     align-items: center;
 }
+
 .title_block h2 {
     font-size: 16px;
     line-height: 42px;
@@ -22,4 +24,25 @@
     width: 350px;
     height: 2px;
     background-color: #797979;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+    .hr{
+
+    }
 }

@@ -8,7 +8,12 @@
     /*justify-content: flex-start;*/
     /*flex-wrap: wrap;*/
 }
+.photoBlock{
 
+}
+.photoBlock img {
+    height: 500px;
+}
 .text {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -17,4 +22,33 @@
 
     max-width: 80vh;
     margin: auto 0;
+}
+
+@media (max-width: 1120px) {
+    .about{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutMeBlock {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .photoBlock img {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .presentationBlock {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: none;
+    }
+    .photoBlock img {
+        display: none;
+    }
 }
