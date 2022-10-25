@@ -19,8 +19,8 @@ export const Presentation = () => {
 
             <div className={s.block_text}>
                 <div className={s.fullName}>
-                    <div>VYACHESLAV</div>
-                    <div className={s.lastName}>OSTAPKEVICH</div>
+                    <span>VYACHESLAV</span> <br/>
+                    <span>OSTAPKEVICH</span>
                 </div>
                 <p className={s.hr}/>
 

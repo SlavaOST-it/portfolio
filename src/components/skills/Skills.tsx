@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./Skills.module.css"
-import styleContainer from "../../common/styles/CommonStyles.module.css"
 import {SkillBlock} from "./skill/SkillBlock";
 import commonStyle from "../../common/styles/CommonStyles.module.css";
 //===== icons ======//

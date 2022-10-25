@@ -20,6 +20,7 @@
 }
 
 .hr {
+    display: block;
     margin-left: 30px;
     width: 350px;
     height: 2px;
@@ -42,7 +43,8 @@
     .container {
         max-width: none;
     }
-    .hr{
 
+    .hr{
+        width: 100px;
     }
 }

@@ -9,6 +9,12 @@ import {ContactItem} from "./contactItem/ContactItem";
 import logo_location from "../../common/img/icons/contacts_logo/location-svgrepo-com (1).svg"
 import logo_message from "../../common/img/icons/contacts_logo/message-svgrepo-com.svg"
 import logo_phone from "../../common/img/icons/contacts_logo/phone-svgrepo-com (1).svg"
+import {LinkLogo} from "../footer/linkLogo/LinkLogo";
+import logo_vk from "../../common/img/icons/footer_logo/vk-svgrepo-com (1).svg";
+import logo_instagram from "../../common/img/icons/footer_logo/instagram-alt-svgrepo-com.svg";
+import logo_facebook from "../../common/img/icons/footer_logo/facebook-svgrepo-com.svg";
+import logo_linkidin from "../../common/img/icons/footer_logo/linkedin-svgrepo-com (1).svg";
+import logo_github from "../../common/img/icons/footer_logo/github-svgrepo-com (1).svg";
 
 
 export const Contacts = () => {
@@ -42,6 +48,17 @@ export const Contacts = () => {
                     <ContactItem img={logo_phone} href={"tel: +375296671053"} direction={"+375 (29) 667-10-53"}/>
                 </div>
 
+
+                <div className={s.logos}>
+                    <LinkLogo href={"https://vk.com/slavaost"} img={logo_vk}/>
+                    <LinkLogo href={"https://www.instagram.com/slavkent_ost/"} img={logo_instagram}/>
+                    <LinkLogo href={"https://www.facebook.com/profile.php?id=100041663271241"} img={logo_facebook}/>
+                    <LinkLogo href={"https://www.linkedin.com/in/vyacheslav-ostapkevich-918112254/"}
+                              img={logo_linkidin}/>
+                    <LinkLogo href={"https://github.com/SlavaOST-it"} img={logo_github}/>
+                </div>
+
+
                 <div className={s.formContainer}>
                     <div className={s.text_block}>
                         <div>
@@ -62,7 +79,7 @@ export const Contacts = () => {
                     </div>
 
                     <div className={s.form_block}>
-                        <form onSubmit={sendEmail} >
+                        <form onSubmit={sendEmail}>
                             <div>
                                 <input type={"text"} placeholder={"Name"} name={"name"}/>
                                 <input type={"text"} placeholder={"E-mail"} name={"email"}/>
@@ -75,8 +92,6 @@ export const Contacts = () => {
                             </button>
                         </form>
                     </div>
-
-
                 </div>
             </div>
         </div>
