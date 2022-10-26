@@ -62,6 +62,10 @@
     margin-bottom: 25px;
 }
 
+.inputError{
+    border: red solid 2px;
+    border-radius: 4px;
+}
 .form_block textarea {
     width: 450px;
     height: 105px;

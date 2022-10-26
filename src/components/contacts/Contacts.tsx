@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 import s from "./Contacts.module.css";
 import commonStyle from "../../common/styles/CommonStyles.module.css";
@@ -21,7 +21,6 @@ export const Contacts = () => {
 
     const sendEmail = (e: any) => {
         e.preventDefault();
-
         emailjs.sendForm('service_i4oyh1d', 'template_ipqd8v9', e.target, 'SzE_DmKmDXh6tomhe')
             .then((result: any) => {
                 console.log(result.text);
@@ -39,7 +38,6 @@ export const Contacts = () => {
                 <span className={commonStyle.hr}></span>
             </div>
 
-
             <div className={s.contactsContainer}>
                 <div className={s.contacts_block}>
                     <ContactItem img={logo_location} direction={"Minsk, Belarus"}/>
@@ -47,7 +45,6 @@ export const Contacts = () => {
                                  direction={"slavaost-it@mail.ru"}/>
                     <ContactItem img={logo_phone} href={"tel: +375296671053"} direction={"+375 (29) 667-10-53"}/>
                 </div>
-
 
                 <div className={s.logos}>
                     <LinkLogo href={"https://vk.com/slavaost"} img={logo_vk}/>
@@ -57,7 +54,6 @@ export const Contacts = () => {
                               img={logo_linkidin}/>
                     <LinkLogo href={"https://github.com/SlavaOST-it"} img={logo_github}/>
                 </div>
-
 
                 <div className={s.formContainer}>
                     <div className={s.text_block}>
@@ -81,13 +77,25 @@ export const Contacts = () => {
                     <div className={s.form_block}>
                         <form onSubmit={sendEmail}>
                             <div>
-                                <input type={"text"} placeholder={"Name"} name={"name"}/>
-                                <input type={"text"} placeholder={"E-mail"} name={"email"}/>
+                                <input
+                                    type={"text"}
+                                    placeholder={"Name"}
+                                    name={"name"}
+                                />
+                                <input
+                                    type={"text"}
+                                    placeholder={"E-mail"}
+                                    name={"email"}
+                                />
                             </div>
                             <div>
                                 <textarea placeholder={"Your message"} name={"message"}></textarea>
                             </div>
-                            <button type={"submit"} value="Send" className={s.form_block_btn}>
+                            <button
+                                type={"submit"}
+                                value="Send"
+                                className={s.form_block_btn}
+                            >
                                 Send Message
                             </button>
                         </form>
