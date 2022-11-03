@@ -79,6 +79,9 @@
 
         margin: 0 auto;
     }
+    .photoBlock:before{
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
