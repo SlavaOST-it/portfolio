@@ -7,8 +7,6 @@
 .photoBlock {
     position: relative;
     display: inline-block;
-    padding: 2px;
-    background: #eee;
 }
 
 .photoBlock:before {
