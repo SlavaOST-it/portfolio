@@ -17,6 +17,19 @@ import testIcon from "../../common/img/icons/test-tube-svgrepo-com.svg"
 
 
 export const Skills = () => {
+    const item = [
+        {img: reactIcons, title: "REACT"},
+        {img: jsIcons, title: "JAVASCRIPT"},
+        {img: typeScriptIcon, title: "TYPESCRIPT"},
+        {img: reduxIcon, title: "REDUX"},
+        {img: htmlIcon, title: "HTML/CSS"},
+        {img: restApiIcon, title: "REST API"},
+        {img: gitIcon, title: "GIT"},
+        {img: materialUIIcon, title: "Material UI"},
+        {img: postmanIcon, title: "Postman"},
+        {img: testIcon, title: "Unit tests"},
+
+    ]
     return (
             <div className={s.skillsBlock}>
                 <div className={commonStyle.title_block}>
@@ -25,46 +38,12 @@ export const Skills = () => {
                 </div>
 
                 <div className={s.skills}>
-                    <SkillBlock
-                        img={reactIcons}
-                        title={"REACT"}
-                    />
-                    <SkillBlock
-                        img={jsIcons}
-                        title={"JAVASCRIPT"}
-                    />
-                    <SkillBlock
-                        img={typeScriptIcon}
-                        title={"TYPESCRIPT"}
-                    />
-                    <SkillBlock
-                        img={reduxIcon}
-                        title={"REDUX"}
-                    />
-                    <SkillBlock
-                        img={htmlIcon}
-                        title={"HTML/CSS"}
-                       />
-                    <SkillBlock
-                        img={restApiIcon}
-                        title={"REST API"}
+                    {item.map(el=>
+                        <SkillBlock
+                            img={el.img}
+                            title={el.title}
                         />
-                    <SkillBlock
-                        img={gitIcon}
-                        title={"GIT"}
-                        />
-                    <SkillBlock
-                        img={materialUIIcon}
-                        title={"Material UI"}
-                    />
-                    <SkillBlock
-                        img={postmanIcon}
-                        title={"Postman"}
-                    />
-                    <SkillBlock
-                        img={testIcon}
-                        title={"Unit tests"}
-                    />
+                    )}
                 </div>
             </div>
 

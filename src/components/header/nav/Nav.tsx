@@ -1,30 +1,29 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import s from "../nav/Nav.module.css";
 
 
-export const Nav = () => {
+type NavType = {
+    link: string,
+    titleLink?: string,
+    imgLogo?: string,
+    className?: string,
+    activeClassName?: string
+}
+
+export const Nav: React.FC<NavType> = ({
+                                           link,
+                                           titleLink,
+                                           imgLogo,
+                                           className,
+                                           activeClassName,
+                                           ...restProps
+                                       }) => {
     return (
         <div>
-            <NavLink to={'/home'}
-                     className={({isActive}) => isActive ? s.buttonActive : s.button}>
-                Home
-            </NavLink>
-            <NavLink to={'/about_me'}
-                     className={({isActive}) => isActive ? s.buttonActive : s.button}>
-                About me
-            </NavLink>
-            <NavLink to={'/skills'}
-                     className={({isActive}) => isActive ? s.buttonActive : s.button}>
-                Skills
-            </NavLink>
-            <NavLink to={'/portfolio'}
-                     className={({isActive}) => isActive ? s.buttonActive : s.button}>
-                Portfolio
-            </NavLink>
-            <NavLink to={'/contacts'}
-                     className={({isActive}) => isActive ? s.buttonActive : s.button}>
-                Contact
+            <NavLink to={link}
+                     className={({isActive}) => isActive ? activeClassName : className}>
+                {titleLink}
+                { imgLogo && <img src={imgLogo} alt={'link logo'} {...restProps}/>}
             </NavLink>
         </div>
     );
