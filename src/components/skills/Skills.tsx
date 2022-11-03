@@ -13,7 +13,7 @@ import gitIcon from "../../common/img/icons/git-svgrepo-com (1).svg"
 import materialUIIcon from "../../common/img/icons/material-ui-svgrepo-com.svg"
 import postmanIcon from "../../common/img/icons/postman-svgrepo-com.svg"
 import testIcon from "../../common/img/icons/test-tube-svgrepo-com.svg"
-
+import {Fade} from "react-awesome-reveal";
 
 
 export const Skills = () => {
@@ -31,21 +31,22 @@ export const Skills = () => {
 
     ]
     return (
-            <div className={s.skillsBlock}>
-                <div className={commonStyle.title_block}>
-                    <h2>SKILLS</h2>
-                    <span className={commonStyle.hr}></span>
-                </div>
+        <div className={s.skillsBlock}>
+            <div className={commonStyle.title_block}>
+                <h2>SKILLS</h2>
+                <span className={commonStyle.hr}></span>
+            </div>
 
+            <Fade direction={'left'} duration={1500}>
                 <div className={s.skills}>
-                    {item.map(el=>
+                    {item.map(el =>
                         <SkillBlock
                             img={el.img}
                             title={el.title}
                         />
                     )}
                 </div>
-            </div>
-
+            </Fade>
+        </div>
     )
 }

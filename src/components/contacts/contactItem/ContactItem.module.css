@@ -8,8 +8,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
+    transition: all 0.2s ease-in;
+}
+.contact_item:hover{
+    transform: scale(1.08);
+
+    -webkit-box-shadow: 0 0 15px 4px rgb(5, 5, 5);
+    -moz-box-shadow: 0 0 15px 4px rgb(0, 0, 0);
+    box-shadow: 0 0 15px 4px rgb(0, 0, 0);
+
+    transition: all 0.2s ease-in;
+}
 .contact_item img {
     width: 20px;
     height: 20px;

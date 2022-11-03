@@ -10,12 +10,8 @@ import logo_location from "../../common/img/icons/contacts_logo/location-svgrepo
 import logo_message from "../../common/img/icons/contacts_logo/message-svgrepo-com.svg"
 import logo_phone from "../../common/img/icons/contacts_logo/phone-svgrepo-com (1).svg"
 import {LinkLogo} from "../footer/linkLogo/LinkLogo";
-import logo_vk from "../../common/img/icons/footer_logo/vk-svgrepo-com (1).svg";
-import logo_instagram from "../../common/img/icons/footer_logo/instagram-alt-svgrepo-com.svg";
-import logo_facebook from "../../common/img/icons/footer_logo/facebook-svgrepo-com.svg";
-import logo_linkidin from "../../common/img/icons/footer_logo/linkedin-svgrepo-com (1).svg";
-import logo_github from "../../common/img/icons/footer_logo/github-svgrepo-com (1).svg";
 import {itemLogo} from "../footer/Footer";
+import {Fade} from "react-awesome-reveal";
 
 
 export const Contacts = () => {
@@ -32,75 +28,78 @@ export const Contacts = () => {
     };
 
     return (
+
         <div className={s.contacts}>
 
             <div className={commonStyle.title_block}>
                 <h2>GET IN TOUCH</h2>
                 <span className={commonStyle.hr}></span>
             </div>
-
-            <div className={s.contactsContainer}>
-                <div className={s.contacts_block}>
-                    <ContactItem img={logo_location} direction={"Minsk, Belarus"}/>
-                    <ContactItem img={logo_message} href={"mailto: slavaost-it@mail.ru"}
-                                 direction={"slavaost-it@mail.ru"}/>
-                    <ContactItem img={logo_phone} href={"tel: +375296671053"} direction={"+375 (29) 667-10-53"}/>
-                </div>
-
-                <div className={s.logos}>
-                    {itemLogo.map(el =>
-                        <LinkLogo href={el.href} img={el.img}/>
-                    )}
-                </div>
-
-                <div className={s.formContainer}>
-                    <div className={s.text_block}>
-                        <div>
-                            <span className={s.span1}>Open to your suggestions </span> <br/>
-                            <span className={s.span2}>Ready to work remotely</span> <br/>
-                            <span className={s.span3}>I will answer your questions</span>
-                        </div>
-                        <div>
-                            <button className={s.form_block_btn}>
-                                {/*<a*/}
-                                {/*    href={"cvPDF"}*/}
-                                {/*    target="_blank"*/}
-                                {/*    rel="noreferrer"*/}
-                                {/*    download={"cvPDF"}/>*/}
-                                Download CV
-                            </button>
-                        </div>
+            <Fade direction={'left'} duration={1500}>
+                <div className={s.contactsContainer}>
+                    <div className={s.contacts_block}>
+                        <ContactItem img={logo_location} direction={"Minsk, Belarus"}/>
+                        <ContactItem img={logo_message} href={"mailto: slavaost-it@mail.ru"}
+                                     direction={"slavaost-it@mail.ru"}/>
+                        <ContactItem img={logo_phone} href={"tel: +375296671053"} direction={"+375 (29) 667-10-53"}/>
                     </div>
 
-                    <div className={s.form_block}>
-                        <form onSubmit={sendEmail}>
+                    <div className={s.logos}>
+                        {itemLogo.map(el =>
+                            <LinkLogo href={el.href} img={el.img}/>
+                        )}
+                    </div>
+
+                    <div className={s.formContainer}>
+                        <div className={s.text_block}>
                             <div>
-                                <input
-                                    type={"text"}
-                                    placeholder={"Name"}
-                                    name={"name"}
-                                />
-                                <input
-                                    type={"text"}
-                                    placeholder={"E-mail"}
-                                    name={"email"}
-                                />
+                                <span className={s.span1}>Open to your suggestions </span> <br/>
+                                <span className={s.span2}>Ready to work remotely</span> <br/>
+                                <span className={s.span3}>I will answer your questions</span>
                             </div>
                             <div>
-                                <textarea placeholder={"Your message"} name={"message"}></textarea>
+                                <button className={s.form_block_btn}>
+                                    {/*<a*/}
+                                    {/*    href={"cvPDF"}*/}
+                                    {/*    target="_blank"*/}
+                                    {/*    rel="noreferrer"*/}
+                                    {/*    download={"cvPDF"}/>*/}
+                                    Download CV
+                                </button>
                             </div>
-                            <button
-                                type={"submit"}
-                                value="Send"
-                                className={s.form_block_btn}
-                            >
-                                Send Message
-                            </button>
-                        </form>
+                        </div>
+
+                        <div className={s.form_block}>
+                            <form onSubmit={sendEmail}>
+                                <div>
+                                    <input
+                                        type={"text"}
+                                        placeholder={"Name"}
+                                        name={"name"}
+                                    />
+                                    <input
+                                        type={"text"}
+                                        placeholder={"E-mail"}
+                                        name={"email"}
+                                    />
+                                </div>
+                                <div>
+                                    <textarea placeholder={"Your message"} name={"message"}></textarea>
+                                </div>
+                                <button
+                                    type={"submit"}
+                                    value="Send"
+                                    className={s.form_block_btn}
+                                >
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Fade>
         </div>
+
     );
 };
 
