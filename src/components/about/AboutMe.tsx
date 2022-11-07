@@ -1,16 +1,13 @@
 import React from 'react';
 import s from "./AboutMe.module.css"
-import commonStyle from "../../common/styles/CommonStyles.module.css";
 import photoMe from "../../common/img/logo_Im.jpg"
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../../common/title/Title";
 
 export const AboutMe = () => {
     return (
         <div className={s.about}>
-            <div className={commonStyle.title_block}>
-                <h2>ABOUT ME</h2>
-                <span className={commonStyle.hr}></span>
-            </div>
+            <Title title={'ABOUT ME'}/>
 
             <Fade direction={'left'} duration={1500}>
                 <div className={s.aboutMeBlock}>

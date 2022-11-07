@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./Portfolio.module.css"
-import commonStyle from "../../common/styles/CommonStyles.module.css";
 import {ProjectItem} from "./proects/ProjectItem";
 import socialImage from "../../common/img/shutterstock_403991497-2-768x432-1.jpg"
 import todoImage from "../../common/img/05.to-do-list.jpg"
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../../common/title/Title";
 
 
 export const Portfolio = () => {
@@ -18,10 +18,8 @@ export const Portfolio = () => {
     return (
 
         <div className={s.portfolioBlock}>
-            <div className={commonStyle.title_block}>
-                <h2>PORTFOLIO</h2>
-                <span className={commonStyle.hr}></span>
-            </div>
+            <Title title={'PORTFOLIO'}/>
+
             <Fade direction={'left'} duration={1500}>
                 <div className={s.projects}>
                     <ProjectItem

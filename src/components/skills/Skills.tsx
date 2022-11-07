@@ -1,8 +1,6 @@
 import React from "react";
 import s from "./Skills.module.css"
-import {SkillBlock} from "./skill/SkillBlock";
-import commonStyle from "../../common/styles/CommonStyles.module.css";
-//===== icons ======//
+import {SkillBlock} from "./skill/SkillBlock";//===== icons ======//
 import htmlIcon from "../../common/img/icons/code.svg"
 import reactIcons from "../../common/img/icons/react.svg"
 import jsIcons from "../../common/img/icons/java-script.svg"
@@ -14,6 +12,7 @@ import materialUIIcon from "../../common/img/icons/material-ui-svgrepo-com.svg"
 import postmanIcon from "../../common/img/icons/postman-svgrepo-com.svg"
 import testIcon from "../../common/img/icons/test-tube-svgrepo-com.svg"
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../../common/title/Title";
 
 
 export const Skills = () => {
@@ -32,10 +31,7 @@ export const Skills = () => {
     ]
     return (
         <div className={s.skillsBlock}>
-            <div className={commonStyle.title_block}>
-                <h2>SKILLS</h2>
-                <span className={commonStyle.hr}></span>
-            </div>
+            <Title title={'SKILLS'}/>
 
             <Fade direction={'left'} duration={1500}>
                 <div className={s.skills}>

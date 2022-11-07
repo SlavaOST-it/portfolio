@@ -1,9 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import s from "./Contacts.module.css";
-import commonStyle from "../../common/styles/CommonStyles.module.css";
 import {ContactItem} from "./contactItem/ContactItem";
-
 
 // ===== logo ===== //
 import logo_location from "../../common/img/icons/contacts_logo/location-svgrepo-com (1).svg"
@@ -12,6 +10,7 @@ import logo_phone from "../../common/img/icons/contacts_logo/phone-svgrepo-com (
 import {LinkLogo} from "../footer/linkLogo/LinkLogo";
 import {itemLogo} from "../footer/Footer";
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../../common/title/Title";
 
 
 export const Contacts = () => {
@@ -30,11 +29,8 @@ export const Contacts = () => {
     return (
 
         <div className={s.contacts}>
+            <Title title={'GET IN TOUCH'}/>
 
-            <div className={commonStyle.title_block}>
-                <h2>GET IN TOUCH</h2>
-                <span className={commonStyle.hr}></span>
-            </div>
             <Fade direction={'left'} duration={1500}>
                 <div className={s.contactsContainer}>
                     <div className={s.contacts_block}>
@@ -58,14 +54,11 @@ export const Contacts = () => {
                                 <span className={s.span3}>I will answer your questions</span>
                             </div>
                             <div>
-                                <button className={s.form_block_btn}>
-                                    {/*<a*/}
-                                    {/*    href={"cvPDF"}*/}
-                                    {/*    target="_blank"*/}
-                                    {/*    rel="noreferrer"*/}
-                                    {/*    download={"cvPDF"}/>*/}
-                                    Download CV
-                                </button>
+                                <a
+                                    href={require('../../common/download/Ostapkevich_CV.pdf')}
+                                    download
+                                    className={s.form_block_btn}
+                                >Download CV</a>
                             </div>
                         </div>
 
