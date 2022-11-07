@@ -56,7 +56,7 @@ export const Contacts = () => {
                             <div>
                                 <a
                                     href={require('../../common/download/Ostapkevich_CV.pdf')}
-                                    download
+                                    download={'Ostapkevich_CV.pdf'}
                                     className={s.form_block_btn}
                                 >Download CV</a>
                             </div>
