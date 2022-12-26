@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c3c89aff.css",
-    "main.js": "/portfolio/static/js/main.21e218fc.js",
+    "main.css": "/portfolio/static/css/main.6fe17938.css",
+    "main.js": "/portfolio/static/js/main.a8c4b2fe.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/me.jpg": "/portfolio/static/media/me.a303583fab97e9a5642f.jpg",
+    "static/media/Ostapkevich_CV.pdf": "/portfolio/static/media/Ostapkevich_CV.952796a805872d80e143.pdf",
     "static/media/logo_Im.jpg": "/portfolio/static/media/logo_Im.3afacad5eeb92e853b7e.jpg",
     "static/media/05.to-do-list.jpg": "/portfolio/static/media/05.to-do-list.09e75ac8346bf8b7d579.jpg",
     "static/media/shutterstock_403991497-2-768x432-1.jpg": "/portfolio/static/media/shutterstock_403991497-2-768x432-1.9deff9c3de382dddbd7b.jpg",
@@ -32,12 +33,12 @@
     "static/media/github-svgrepo-com (1).svg": "/portfolio/static/media/github-svgrepo-com (1).fc0ffe042a9582d2a394e1c609baa9f2.svg",
     "static/media/code.svg": "/portfolio/static/media/code.1209a702d145aa37da50482dde128004.svg",
     "static/media/material-ui-svgrepo-com.svg": "/portfolio/static/media/material-ui-svgrepo-com.720f89e823f5301b8552007eb6cece98.svg",
-    "main.c3c89aff.css.map": "/portfolio/static/css/main.c3c89aff.css.map",
-    "main.21e218fc.js.map": "/portfolio/static/js/main.21e218fc.js.map",
+    "main.6fe17938.css.map": "/portfolio/static/css/main.6fe17938.css.map",
+    "main.a8c4b2fe.js.map": "/portfolio/static/js/main.a8c4b2fe.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3c89aff.css",
-    "static/js/main.21e218fc.js"
+    "static/css/main.6fe17938.css",
+    "static/js/main.a8c4b2fe.js"
   ]
 }
