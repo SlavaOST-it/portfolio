@@ -15,6 +15,7 @@
 .logos{
     display: none;
 }
+
 .formContainer {
     display: flex;
     justify-content: space-between;
@@ -59,7 +60,7 @@
     height: 40px;
 
     display: block;
-    margin-bottom: 25px;
+    margin: 15px 0;
 }
 
 .inputError{
@@ -70,7 +71,7 @@
     width: 450px;
     height: 105px;
     resize: none;
-    margin-bottom: 25px;
+    margin: 5px 0;
 }
 
 .form_block_btn {

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
+import * as Yup from 'yup';
 import s from "./Contacts.module.css";
 import {ContactItem} from "./contactItem/ContactItem";
 
@@ -11,20 +12,38 @@ import {LinkLogo} from "../footer/linkLogo/LinkLogo";
 import {itemLogo} from "../footer/Footer";
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../../common/title/Title";
+import {useFormik} from "formik";
+import {InfoModal} from "../../common/modals/InfoModal";
 
 
 export const Contacts = () => {
+    const [openModal, setOpenModal] = useState(false)
 
-    const sendEmail = (e: any) => {
-        e.preventDefault();
-        emailjs.sendForm('service_i4oyh1d', 'template_ipqd8v9', e.target, 'SzE_DmKmDXh6tomhe')
-            .then((result: any) => {
-                console.log(result.text);
-            }, (error: any) => {
-                console.log(error.text);
-            });
-        e.target.reset()
-    };
+    const formik = useFormik({
+        initialValues: {
+            from_name: '',
+            reply_to: '',
+            message: ''
+        },
+        validationSchema: Yup.object({
+            from_name: Yup.string().required('* Name field is required'),
+            reply_to: Yup.string().email('Invalid email address')
+                .required('* Email field is required'),
+            message: Yup.string().required('* Message field is required')
+
+        }),
+        onSubmit: (values) => {
+            emailjs.send(process.env.REACT_APP_FORMIK_SERVICE_ID!, process.env.REACT_APP_FORMIK_TEMPLATE_ID!, values, process.env.REACT_APP_FORMIK_USER_ID)
+                .then((result: any) => {
+                    console.log(result.text);
+                }, (error: any) => {
+                    console.log(error.text);
+                });
+            formik.resetForm()
+            setOpenModal(true)
+            setTimeout(() => setOpenModal(false), 5000)
+        }
+    })
 
     return (
 
@@ -58,35 +77,55 @@ export const Contacts = () => {
                                     href={require('../../common/download/Ostapkevich_CV.pdf')}
                                     download={'Ostapkevich_CV.pdf'}
                                     className={s.form_block_btn}
-                                >Download CV</a>
+                                >
+                                    Download CV
+                                </a>
                             </div>
                         </div>
 
                         <div className={s.form_block}>
-                            <form onSubmit={sendEmail}>
+                            <form onSubmit={formik.handleSubmit}>
                                 <div>
                                     <input
                                         type={"text"}
+                                        id={"from_name"}
                                         placeholder={"Name"}
-                                        name={"name"}
+                                        {...formik.getFieldProps('from_name')}
                                     />
+                                    {formik.touched.from_name && formik.errors.from_name &&
+                                        <div>{formik.errors.from_name}</div>}
+
                                     <input
                                         type={"text"}
+                                        id={"reply_to"}
                                         placeholder={"E-mail"}
-                                        name={"email"}
+                                        {...formik.getFieldProps('reply_to')}
                                     />
+                                    {formik.touched.reply_to && formik.errors.reply_to &&
+                                        <div>{formik.errors.reply_to}</div>}
                                 </div>
                                 <div>
-                                    <textarea placeholder={"Your message"} name={"message"}></textarea>
+                                    <textarea id={"message"}
+                                              name={"message"}
+                                              placeholder={"Your message"}
+                                              autoComplete="off"
+                                              onChange={formik.handleChange}
+                                              value={formik.values.message}
+                                    />
+                                    {formik.touched.message && formik.errors.message &&
+                                        <div>{formik.errors.message}</div>}
                                 </div>
                                 <button
                                     type={"submit"}
                                     value="Send"
                                     className={s.form_block_btn}
+                                    disabled={formik.isSubmitting}
                                 >
                                     Send Message
                                 </button>
                             </form>
+
+                            <InfoModal active={openModal}/>
                         </div>
                     </div>
                 </div>
