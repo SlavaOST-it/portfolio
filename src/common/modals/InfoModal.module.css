@@ -1,0 +1,9 @@
+.modal {
+    display: flex;
+    margin: 25px auto;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 80px;
+    color: #545454;
+}
