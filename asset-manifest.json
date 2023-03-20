@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5b79a65e.css",
-    "main.js": "/portfolio/static/js/main.9c09ea28.js",
+    "main.js": "/portfolio/static/js/main.c08bbb4a.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/me.jpg": "/portfolio/static/media/me.a303583fab97e9a5642f.jpg",
     "static/media/educationBG.jpg": "/portfolio/static/media/educationBG.423891e4c8bd43ce75e3.jpg",
-    "static/media/Ostapkevich_CV.pdf": "/portfolio/static/media/Ostapkevich_CV.952796a805872d80e143.pdf",
+    "static/media/Ostapkevich_Vyacheslav_CV.pdf": "/portfolio/static/media/Ostapkevich_Vyacheslav_CV.99b7b86c9113a5fc2af4.pdf",
     "static/media/logo_Im.jpg": "/portfolio/static/media/logo_Im.3afacad5eeb92e853b7e.jpg",
     "static/media/05.to-do-list.jpg": "/portfolio/static/media/05.to-do-list.09e75ac8346bf8b7d579.jpg",
     "static/media/shutterstock_403991497-2-768x432-1.jpg": "/portfolio/static/media/shutterstock_403991497-2-768x432-1.9deff9c3de382dddbd7b.jpg",
@@ -35,11 +35,11 @@
     "static/media/code.svg": "/portfolio/static/media/code.1209a702d145aa37da50482dde128004.svg",
     "static/media/material-ui-svgrepo-com.svg": "/portfolio/static/media/material-ui-svgrepo-com.720f89e823f5301b8552007eb6cece98.svg",
     "main.5b79a65e.css.map": "/portfolio/static/css/main.5b79a65e.css.map",
-    "main.9c09ea28.js.map": "/portfolio/static/js/main.9c09ea28.js.map",
+    "main.c08bbb4a.js.map": "/portfolio/static/js/main.c08bbb4a.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b79a65e.css",
-    "static/js/main.9c09ea28.js"
+    "static/js/main.c08bbb4a.js"
   ]
 }
