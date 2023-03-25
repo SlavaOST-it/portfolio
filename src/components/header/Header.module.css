@@ -23,7 +23,7 @@
     text-decoration: none;
     text-align: center;
     background-color: white;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #333 50%, #333);
+    background-image: linear-gradient(to left, transparent, transparent 50.1%, #333 50%, #333);
     background-position: 100%;
     background-size: 200% 100%;
     transition: all .40s ease-in;
